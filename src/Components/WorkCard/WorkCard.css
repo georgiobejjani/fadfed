@@ -1,0 +1,9 @@
+.workCard__inside {
+    width: 95%;
+    margin: auto;
+}
+
+.workCard__title {
+    font-family: "Playwrite AU SA", cursive;
+    text-align: center;
+}

@@ -1,0 +1,152 @@
+.valueBlock {
+    width: 90%;
+    min-height: 250px;
+    margin: auto;
+    border-radius: 100px;
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+}
+
+.rightSide {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(234, 234, 234, 0.8828125) 100%);
+}
+
+.leftSide {
+    background: linear-gradient(90deg, rgba(234, 234, 234, 0.8828125) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.rightSide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    box-shadow: 20px 12px 15px -8px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 100px;
+}
+
+.leftSide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    box-shadow: -20px 12px 20px -8px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 100px;
+}
+
+.thumbPart {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 100px;
+}
+
+.rightThumb {
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.leftThumb {
+    left: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.valuesData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.valuesData.reversed {
+    flex-direction: row-reverse;
+}
+
+
+.values-content {
+    width: 45%;
+}
+
+.values__count {
+    font-size: 40px;
+    text-align: center;
+    font-family: "Playwrite AU SA", cursive;
+}
+
+.values__img {
+    height: 90px;
+    margin: 0 20px;
+}
+
+.values__separator {
+    height: 220px;
+    width: 3px;
+    background-color: black;
+    margin: 0 20px;
+}
+
+.values__parag {
+    width: 90%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .valuesData, .valuesData.reversed {
+        flex-direction: column;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .values__parag {
+        width: 100%;
+    }
+
+    .valuesData {
+        margin-right: 20px;
+    }
+
+    .valuesData.reversed {
+        margin-left: 20px;
+    }
+
+    .valueBlock {
+        border-radius: 20px;
+    }
+
+    .rightSide::before, .leftSide::before {
+        border-radius: 20px;
+    }
+
+    .thumbPart {
+        width: 20px;
+    }
+
+    .values__separator {
+        display: none;
+    }
+
+    .values-content {
+        width: 95%;
+    }
+
+    .values__count {
+        font-size: 30px;
+    }
+
+    .values__img {
+        height: 45px;
+    }
+}

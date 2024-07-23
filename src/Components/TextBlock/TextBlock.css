@@ -1,0 +1,52 @@
+.test {
+    color: var(--main-color);
+}
+
+.textBlock {
+    display: block;
+    text-align: left;
+    width: fit-content;
+    margin: auto;
+}
+
+.textBlock__introTitle {
+    font-family: "Playwrite AU SA", cursive;
+    color: rgb(200, 12, 12);
+    font-size: 1rem;
+    margin: 0;
+    width: fit-content;
+}
+
+.textBlock__title {
+    font-family: "Playwrite AU SA", cursive;
+    color: var(--black);
+    font-size: 2rem;
+    width: fit-content;
+    margin: 5px 0;
+}
+
+.textBlock__content {
+    width: 90%;
+    color: rgb(75, 75, 75);
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0 0 15px 0;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    .textBlock__introTitle {
+        width: auto;
+        text-align: center;
+    }
+    
+    .textBlock__title {
+        width: auto;
+        text-align: center;
+    }
+    
+    .textBlock__content {
+        text-align: center;
+        margin: auto;
+    }
+}
